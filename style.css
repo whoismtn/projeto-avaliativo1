@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+} 
+
+:root{
+    font-size: 62.5%;
+
+    --cor-laranja: #D64D00;
+    --cor-preto:black;
+    --cor-roxo:#5C59D4;
+    --cor-branco:white;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background: white;
+    font-family: 'Rubik', sans-serif;
+}
+/*NAVBAR*/
+nav{
+    display: block;
+    height: 5.0em;   
+    font-size: 1.6rem;
+    background-color: var(--cor-branco) ;
+    
+    }
+
+nav .navbar-brand{
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: var(--cor-laranja);
+    margin-left: 1.2em;
+}
+
+nav .navbar-brand span{
+    color: var(--cor-preto);
+}
+nav  .navbar-brand:hover{
+     color: var(--cor-roxo);
+}
+
+nav .navbar-nav{
+    margin: 0px auto;
+    gap: 15px;
+}
+nav .navbar-collapse{
+    background-color: var(--cor-branco);
+    padding: 20px;
+}
+nav .navbar-nav a:hover{
+    color: var(--cor-laranja);
+    font-weight: bold;
+}
+
+/*Carousel*/
+.carousel-item{
+    
+}
+.carousel-item img{
+    position: relative;
+}
+.carousel-item .item-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding-left: 5%;
+    
+ 
+    position: absolute;
+    top: 0;
+}
+
+.item-content h1{
+   font-size: 4.8em;
+   font-weight: bold;
+}
+.item-content p{
+    
+    font-size: 1.5rem;
+}
+.c-button{
+    background: var(--cor-laranja);
+    border: none;
+    border-radius: 3px;
+    font-size:1.5em;
+    padding: .8em;
+    color: white;
+}
+
+
+
+
+/*Quem Somos*/
+
+#quemSomos{
+    padding: 50px;
+}
+#quemSomos .conteudo{
+    display: flex;
+    flex-direction: row;
+    
+    gap: 20px;
+    margin-bottom: 4.0em;
+}
+#quemSomos .conteudo p{
+    display: grid;
+    place-content: center;
+    font-size: 1.6rem;
+}
+#quemSomos .conteudo img{
+    max-width: 500px;
+    max-height: 500px;
+}
+#quemSomos .conteudo .texto{
+    display: grid;
+    place-content: center;
+}
+
+
+
+
+/*Time*/
+.nossoTime{
+    background:rgb(236, 235, 235);
+}
+.time{    
+    justify-content: center;
+    padding: 1.0em;
+    gap: 0px;
+    width: 100%;
+}
+section {
+    padding-top: 2em;
+}
+.card.box{
+    background: black;
+}
+.card-body img{
+    width: 40%;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin: 1.5em;
+}
+.card-title {
+    font-weight: bold;
+}
+
+.card-body ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    margin: 2em;
+}
+.card-body ul li{
+    transition: color .2s;
+}
+.card-body ul li:hover{
+    color: var(--cor-laranja);
+}
+.card-icon{
+    width: 25px;
+    height: 25px;
+}
+
+
+.card-body button{
+    background: var(--cor-laranja);
+    padding: 1.1em;
+    border: none;
+    border-radius: .8em;
+    color: var(--cor-branco);
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 2em;
+    transition: background .4s;
+    font-size: 1.2rem;
+}
+
+.card-body button:hover{
+    background: var(--cor-roxo);
+    
+    
+}
+
+/*PRODUTOS*/
+
+.catalogoProdutos{
+    
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+}
+.catalogoProdutos .card{
+    position: relative;
+    transition: border .2s;
+}
+.catalogoProdutos .card:hover{
+   border: 1px solid var(--cor-laranja); 
+}
+.catalogoProdutos .card .tagpromocao{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--cor-branco);
+    background: var(--cor-laranja);
+    padding: 6px;
+    font-weight: bold;
+}
+.catalogoProdutos .card button{
+    background: rgb(0, 173, 0);
+    margin-top: 15px;
+    height: 40px;
+    width: 100%;
+    transition: background .2s;
+   
+}
+.catalogoProdutos .card button:hover{
+    background: rgb(2, 112, 2);
+    
+
+}
+.catalogoProdutos .card .taglancamento{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:white;
+    background:green;
+    padding: 6px;
+    font-weight: bold;
+}
+
+#produtos .card{
+    padding: 10px;
+   }
+
+
+.catalogoProdutos h5{
+    font-weight: bold;
+    font-size: 1.9rem;
+    }
+.catalogoProdutos .comparativo{
+    text-decoration: line-through;
+    color: red;
+    display: inline;
+}
+.catalogoProdutos .promocao{
+    color: green;
+    display: inline;
+}
+.catalogoProdutos a{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+/*media quueries*/
+@media (max-width:768px){
+    #quemSomos .conteudo{
+            flex-direction: column;
+            
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 50px;
+    background: var(--cor-laranja);
+    height: 300px;
+    gap: 20px;
+}
+
+footer .footer-esquerda{
+    
+    padding: 20px;
+}
+.footer-esquerda a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-size: 1.6rem;
+    transition: color .2s;
+}
+.footer-esquerda a:hover{
+    color: var(--cor-roxo);
+}
+.footer-esquerda h1{
+    font-weight: bold;
+}
+.footer-esquerda ul{
+    display: flex;
+    justify-content: center;
+    color: var(--cor-branco);
+    list-style: none;
+    gap: 8px;
+}
+.footer-esquerda li:hover{
+    color: var(--cor-roxo);
+}
+.footer-esquerda .pagamentos{
+   
+    display: flex;
+    justify-content: center;
+    
+
+}
+.footer-esquerda .pagamentos img{
+    max-width: 300px;
+}
+
+.footer-meio{
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    color: var(--cor-branco);
+    padding: 20px;
+}
+.footer-meio h3{
+    font-weight: bold;
+}
+.footer-meio ul{
+    list-style: none;
+    }
+.footer-meio a{
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-size: 1.6rem;
+    transition: color .2s;
+}
+.footer-meio a:hover{
+    color: #5C59D4;
+} 
+.contato{
+   color: #fff;
+   font-size: 1.2rem;
+}
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    .item-content h1{
+        font-size: 2em;
+    }
+    .item-content p {
+        font-size: 0.8em;
+    }
+    .c-button{
+        font-size: 0.8em;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .item-content h1{
+        font-size: 4em;
+    }
+    .item-content p {
+        font-size: 1.6em;
+    }    
+    .c-button{
+        font-size: 1.6em;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    p{
+        font-size: 14px;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    p{
+        font-size: 9px;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    p{
+        font-size: 7px;
+    }
+}
